@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[30];
+    int i,count1=0,count2=0;
+    
+    fgets(s,sizeof(s),stdin);
+
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u' || s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+        {
+            count1++;
+        }
+        else
+        {
+            count2++;
+        }
+    }
+
+    printf("Total Number of Vowels : %d\n",count1);
+    printf("Total Number of Consonants : %d\n",count2);
+
+    return 0;
+}

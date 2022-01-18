@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[30];
+    int i;
+    
+    fgets(s,sizeof(s),stdin);
+
+    for(i=0;s[i]!='\0';i++)
+    {
+        s[i]=s[i]+32;
+    }
+
+    puts(s);
+
+    return 0;
+}

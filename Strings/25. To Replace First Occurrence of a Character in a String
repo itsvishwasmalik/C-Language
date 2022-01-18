@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[100];
+    char ch,nch;
+    int i;
+    
+    fgets(s,sizeof(s),stdin);
+    scanf("%c",&ch);
+    getchar();
+    scanf("%c",&nch);
+
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]==ch)
+        {
+            s[i]=nch;
+            break;
+        }
+    }
+
+    puts(s);
+
+    return 0;
+}

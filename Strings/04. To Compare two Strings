@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[30],t[30];
+    int i;
+    fgets(s,sizeof(s),stdin);
+    fgets(t,sizeof(t),stdin);
+
+    for (i=0;s[i]!='\0'&&t[i]!='\0';i++)
+    {
+        if(s[i]==t[i])
+        {
+            printf("Equal Strings");
+            break;
+        }
+        else if(s[i]!=t[i]&&s[i]>t[i])
+        {
+            printf("String s is Greater than String t");
+            break;
+        }
+        else if(s[i]!=t[i]&&s[i]<t[i])
+        {
+            printf("String s is Smaller than String t");
+            break;
+        }
+    }
+
+    return 0;
+}

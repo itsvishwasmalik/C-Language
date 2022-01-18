@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[30];
+    int i;
+
+    fgets(s,sizeof(s),stdin);
+
+    int l=strlen(s),flag=1;
+
+    for(i=0;i<l/2;i++)
+    {
+        if(s[i]!=s[l-i-1])
+        {
+            flag=0;
+            break;
+        }
+    }
+    
+    printf("%d",flag);
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[100],ch;
+    int i,count=1,j;
+    
+    fgets(s,sizeof(s),stdin);
+    scanf("%c",&ch);
+
+    for(i=strlen(s)-1;i>=0;i--)
+    {
+        if(s[i]==ch)
+        {
+            count=i;
+            break;
+        }
+    }
+
+    for(j=i;j<strlen(s);j++)
+    {
+        s[j]=s[j+1];
+    }
+
+    puts(s);
+
+    return 0;
+}

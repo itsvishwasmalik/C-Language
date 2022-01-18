@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[30];
+    int i,count1=0,count2=0,count3=-1;
+    
+    fgets(s,sizeof(s),stdin);
+
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]>='a'&&s[i]<='z' || s[i]>='A'&&s[i]<='Z')
+        {
+            count1++;
+        }
+        else if(s[i]>='0'&&s[i]<='9')
+        {
+            count2++;
+        }
+        else
+        {
+            count3++;
+        }
+    }
+
+    printf("Total Number of Alphabets : %d\n",count1);
+    printf("Total Number of Digits : %d\n",count2);
+    printf("Total Number of Special Character : %d\n",count3);
+    
+    return 0;
+}

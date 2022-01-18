@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int h[128];
+
+int min(int a,int b)
+{
+    return a<b?a:b;
+}
+
+int main()
+{
+    char s[100];
+    int i,a,mn=130;
+    
+    fgets(s,sizeof(s),stdin);
+
+    for(i=0;s[i]!='\0';i++)
+    {
+        h[s[i]]++;
+    }
+
+    for(i=0;i<128;i++)
+    {
+        if(h[i]!=0)
+        {
+            mn=min(mn,h[i]);
+        }
+    }
+
+    for(i=0;i<128;i++)
+    {
+        if(h[i]==mn && h[i]!=0)
+        {
+            printf("%c ",i);
+        }
+    }
+
+    return 0;
+}
