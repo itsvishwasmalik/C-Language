@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int a[100],i,n,mx1,mx2;
+    printf("Enter size of array: ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    mx1=a[0];
+    mx2=a[0];
+    for(i=0;i<n;i++)
+    {
+        if (a[i]>mx1)
+        {
+            mx1=a[i];   
+        }
+        else if(a[i]>mx2&&a[i]<mx1)
+        {
+            mx2=a[i];
+        }
+    }
+
+    printf("Maximum Element is :%d\n",mx1);
+    printf("Second Largest Element is :%d\n",mx2);
+    return 0;
+}

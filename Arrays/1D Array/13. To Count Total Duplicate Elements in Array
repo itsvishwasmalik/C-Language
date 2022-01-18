@@ -1,0 +1,27 @@
+#include <stdio.h>
+int h[100];
+int main()
+{
+    int a[100],n,i,count=0;
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    for(i=0;i<n;i++)
+    {
+        h[a[i]]++;
+    }
+
+    for(i=0;i<n;i++)
+    {
+        if(h[i]>1)
+        {
+            count++;
+        }
+    }
+    printf("Total no of Duplicate Elements are : %d",count);
+    return 0;
+}
